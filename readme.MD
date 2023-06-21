@@ -41,7 +41,7 @@ EXPOSE 80
 CMD python ./app.py
 ```
 
-# Then...
+Then...
 ```
 git add .
 ```
@@ -58,7 +58,7 @@ eb create twoge
 ```
 Once everything is running, we add in our database URI with the eb setenv command
 
-From here I created a .github directory then a workflows directory and finally my pipelin .yml file
+From here I created a .github directory then a workflows directory and finally my pipeline .yml file
 
 ``` 
 mkdir .github
@@ -147,11 +147,16 @@ Next I commented out the elastic beanstalk info on my .gitignore
 
 I then added commited and pushed to my master branch which trigers the github action
 
-``` git push origin master ```
+``` 
+git push origin master
+```
 AND BOOOOOOM WE HAVE PIPELINE WORKING LIVE @
-``` http://twoge-env.eba-xjmwayy6.eu-west-1.elasticbeanstalk.com/posts ```
+``` 
+http://twoge-env.eba-xjmwayy6.eu-west-1.elasticbeanstalk.com/posts 
+```
 
 Next I made a new directory and ran a git clone of chandras repo to run all of this locally
+
 I then made a new docker compose file
 ``` 
 version: '3'
