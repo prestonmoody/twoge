@@ -200,14 +200,14 @@ networks:
 
 Finally, I ran the compose up 
 ``` 
-docker compose up 
+Docker compose up 
 ```
 
 # **Troubles**
 ```
-1. forgot you had to add and commit into git to get the app working on elastic beanstalk
-2. forgot to comment out the elastic beanstalk info on my .gitingore file
-3. writing the docker compose file with the postgres database info and URI format to connect
+1. Forgot I had to add and commit into git to get the app working on elastic beanstalk
+2. Forgot to comment out the elastic beanstalk info on my .gitingore file
+3. Writing the docker compose file with the postgres database info and URI format to connect database
 ```
 
 Twoge has a single table in its database, which stores information about each tweet. The table has the following attributes:
