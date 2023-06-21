@@ -56,7 +56,7 @@ eb init
 ``` 
 eb create twoge
 ```
-Once everything is running, we add in our database URI with the #**eb setenv** command
+Once everything is running, we add in our database URI with the ```eb setenv``` command
 
 From here I created a .github directory then a workflows directory and finally my pipeline .yml file
 
