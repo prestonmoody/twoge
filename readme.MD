@@ -19,15 +19,18 @@ Twoge is a social media platform dedicated solely to tweets about Dodge. This ap
 ## **Getting started**
 
 First I forked off of chandras repo into my own
+
 I then added action secrets to include
 ```
 1. DOCKER_USERNAME
 2. DOCKER_PASSWORD
 3. AWS_ACCESS_KEY_ID
-4. AWS_SECRET_ACCESS_KEY ```
+4. AWS_SECRET_ACCESS_KEY 
+```
 
 Next we created a Dockerfile
-```FROM python:alpine
+```
+FROM python:alpine
 
 RUN apk update && \
     apk add --no-cache build-base libffi-dev openssl-dev
@@ -35,21 +38,37 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 EXPOSE 80
-CMD python ./app.py```
+CMD python ./app.py
+```
 
-then...
-```git add .```
-```git commit -m"first-commit" ```
+# Then...
+```
+git add .
+```
+```
+git commit -m "first-commit"
+```
 
-next we initiate Elastic Beanstalk
-``` eb init ```
-``` eb create twoge```
+Next we initiate Elastic Beanstalk
+```
+eb init
+```
+``` 
+eb create twoge
+```
 Once everything is running, we add in our database URI with the eb setenv command
+
 From here I created a .github directory then a workflows directory and finally my pipelin .yml file
 
-``` mkdir .github ```
-``` mkdir workflows ```
-``` touch cicd-pipeline.yml ```
+``` 
+mkdir .github
+```
+```
+mkdir workflows
+```
+``` 
+touch cicd-pipeline.yml
+```
 ```
 name: Deploylent CICD pipeline 
 
@@ -121,7 +140,8 @@ jobs:
 
       - name: Deploy to Elastic Beanstalk
         run: |
-          eb deploy ```
+          eb deploy
+```
 
 Next I commented out the elastic beanstalk info on my .gitignore
 
@@ -174,13 +194,16 @@ networks:
 ```
 
 Finally, I ran the compose up 
-``` docker compose up ```
+``` 
+docker compose up 
+```
 
 # **Troubles**
 ```
 1. forgot you had to add and commit into git to get the app working on elastic beanstalk
 2. forgot to comment out the elastic beanstalk info on my .gitingore file
-3. writing the docker compose file with the postgres database info and URI format to connect ```
+3. writing the docker compose file with the postgres database info and URI format to connect
+```
 
 Twoge has a single table in its database, which stores information about each tweet. The table has the following attributes:
 
