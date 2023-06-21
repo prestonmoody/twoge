@@ -18,15 +18,16 @@ Twoge is a social media platform dedicated solely to tweets about Dodge. This ap
 
 ## **Getting started**
 
-First we forked off of chandras repos into our own
+First I forked off of chandras repo into our own
 I then added action secrets to include
+```
 1. DOCKER_USERNAME
 2. DOCKER_PASSWORD
 3. AWS_ACCESS_KEY_ID
-4. AWS_SECRET_ACCESS_KEY
+4. AWS_SECRET_ACCESS_KEY ```
 
 Next we created a Dockerfile
-## FROM python:alpine
+```FROM python:alpine
 
 RUN apk update && \
     apk add --no-cache build-base libffi-dev openssl-dev
@@ -34,22 +35,23 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 EXPOSE 80
-CMD python ./app.py*
+CMD python ./app.py```
 
 then...
-## git add .
-##**git commit -m"first-commit"**
+```git add .```
+```git commit -m"first-commit" ```
 
 next we initiate Elastic Beanstalk
-## ** eb init**
-## ** eb create twoge**
-once everything is running, we add in our database URI with the eb setenv command
+``` eb init ```
+``` eb create twoge```
+Once everything is running, we add in our database URI with the eb setenv command
 From here I created a .github directory then a workflows directory and finally my pipelin .yml file
 
-##*mkdir .github*
-##**mkdir workflows **
-##**touch cicd-pipeline.yml**
-##**name: Deploylent CICD pipeline 
+``` mkdir .github ```
+``` mkdir workflows ```
+``` touch cicd-pipeline.yml ```
+```
+name: Deploylent CICD pipeline 
 
 on:
   push:
@@ -119,19 +121,20 @@ jobs:
 
       - name: Deploy to Elastic Beanstalk
         run: |
-          eb deploy**
+          eb deploy ```
 
 Next I commented out the elastic beanstalk info on my .gitignore
 
 I then added commited and pushed to my master branch which trigers the github action
 
-##**git push origin master**
+``` git push origin master ```
 AND BOOOOOOM WE HAVE PIPELINE WORKING LIVE @
-##**http://twoge-env.eba-xjmwayy6.eu-west-1.elasticbeanstalk.com/posts**
+``` http://twoge-env.eba-xjmwayy6.eu-west-1.elasticbeanstalk.com/posts ```
 
 Next I made a new directory and ran a git clone of chandras repo to run all of this locally
 I then made a new docker compose file
-##**version: '3'
+``` 
+version: '3'
 services:
   database:
     image: postgres
@@ -167,15 +170,17 @@ services:
 networks:
   twoge-net:
     name: twoge-net_network
-    driver: bridge**
+    driver: bridge
+```
 
 Finally, I ran the compose up 
-##** docker compose up**
+``` docker compose up ```
 
-## **troubles**
+# **Troubles**
+```
 1. forgot you had to add and commit into git to get the app working on elastic beanstalk
 2. forgot to comment out the elastic beanstalk info on my .gitingore file
-3. writing the docker compose file with the postgres database info and URI format to connect
+3. writing the docker compose file with the postgres database info and URI format to connect ```
 
 Twoge has a single table in its database, which stores information about each tweet. The table has the following attributes:
 
