@@ -1,4 +1,4 @@
-# **Twoge**
+#Twoge
 
 <h1 align="center">
 	<img
@@ -46,7 +46,7 @@ next we initiate Elastic Beanstalk
 once everything is running, we add in our database URI with the eb setenv command
 From here I created a .github directory then a workflows directory and finally my pipelin .yml file
 
-##**mkdir .github **
+##*mkdir .github*
 ##**mkdir workflows **
 ##**touch cicd-pipeline.yml**
 ##**name: Deploylent CICD pipeline 
