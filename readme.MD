@@ -56,7 +56,7 @@ eb init
 ``` 
 eb create twoge
 ```
-Once everything is running, we add in our database URI with the eb setenv command
+Once everything is running, we add in our database URI with the #**eb setenv** command
 
 From here I created a .github directory then a workflows directory and finally my pipeline .yml file
 
@@ -150,7 +150,7 @@ I then added commited and pushed to my master branch which trigers the github ac
 ``` 
 git push origin master
 ```
-AND BOOOOOOM WE HAVE PIPELINE WORKING LIVE @
+BOOOOOOM WE HAVE A FUNCTIONING PIPELINE AND THE APP IS LIVE @
 ``` 
 http://twoge-env.eba-xjmwayy6.eu-west-1.elasticbeanstalk.com/posts 
 ```
@@ -205,9 +205,10 @@ Docker compose up
 
 # **Troubles**
 ```
-1. Forgot I had to add and commit into git to get the app working on elastic beanstalk
-2. Forgot to comment out the elastic beanstalk info on my .gitingore file
-3. Writing the docker compose file with the postgres database info and URI format to connect database
+1. Forgot I had to add and commit git once I created my docker file. This cause the app to not work on elastic beanstalk
+2. Deployment kept failing in the github action due the elastic beanstalk info was in my .gitingore file
+3. Writing the docker compose file with the postgres database info 
+4. URI formatting to connect Postgres database container
 ```
 
 Twoge has a single table in its database, which stores information about each tweet. The table has the following attributes:
