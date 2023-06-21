@@ -18,7 +18,7 @@ Twoge is a social media platform dedicated solely to tweets about Dodge. This ap
 
 ## **Getting started**
 
-First I forked off of chandras repo into our own
+First I forked off of chandras repo into my own
 I then added action secrets to include
 ```
 1. DOCKER_USERNAME
