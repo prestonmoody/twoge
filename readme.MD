@@ -26,7 +26,7 @@ I then added action secrets to include
 4. AWS_SECRET_ACCESS_KEY
 
 Next we created a Dockerfile
-# *FROM python:alpine
+#*FROM python:alpine
 
 RUN apk update && \
     apk add --no-cache build-base libffi-dev openssl-dev
