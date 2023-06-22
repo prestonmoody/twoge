@@ -7,7 +7,7 @@
 		src="./static/img/twoge-cover.png">
 </h1>
 
-Twoge is a social media platform dedicated solely to tweets about Dodge. This application is built using Flask, SQLAlchemy, and PostgreSQL.
+Twoge is a social media platform dedicated solely to tweets about Doge. This application is built using Flask, SQLAlchemy, and PostgreSQL.
 
 <h1 align="center">
 	<img
