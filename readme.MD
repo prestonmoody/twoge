@@ -202,7 +202,7 @@ networks:
 
 Finally, I ran the compose up 
 ``` 
-Docker compose up 
+docker compose up 
 ```
 
 # **Troubles**
