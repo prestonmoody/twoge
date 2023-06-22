@@ -16,6 +16,8 @@ Twoge is a social media platform dedicated solely to tweets about Doge. This app
 		src="./static/img/twoge.png">
 </h1>
 
+My role on this project was to implement a CI/CD pipeline for a Python Flask-based application. The pipeline will utilize GitHub Actions for automation, Docker for containerization, Elastic Beanstalk for deployment, and AWS RDS Postgres for the database server. Source application files can be found at https://github.com/chandradeoarya/twoge/
+
 ## **Getting started**
 
 First I forked off of chandras repo into my own
